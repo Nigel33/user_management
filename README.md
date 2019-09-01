@@ -7,6 +7,7 @@
 - Open up another instance of the terminal and run these commands to connect rails to a database: 
 [local_2]$ docker-compose exec web bash
 [docker]$ rake db:setup
+[docker[$ rails db:migrate 
 
 
 ## ADDITIONAL DOCKER NOTES
