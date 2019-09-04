@@ -5,6 +5,39 @@
 
 body {
   padding-top: 20px;
+  margin 0 20px;
 }
+
+header {
+	display: flex;
+	background-color: purple;
+	justify-content: center;
+	height: 100px;
+	width: 100%;
+	color: white;
+	align-items: center;
+}
+
+header + h1 {
+	align-items: center;
+}
+
+.row {
+	display: block;
+	border-bottom: 1px solid black;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.users-list dl {
+	display: flex;
+	padding: 15px;
+}
+
+.users-list dt {
+	padding-right: 5px
+}
+
+
 
 
