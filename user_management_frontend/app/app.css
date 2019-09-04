@@ -6,6 +6,9 @@
 body {
   padding-top: 20px;
   margin 0 20px;
+  font: 20px arial, helvetica;
+  width: 80%;
+	margin: 0 auto;
 }
 
 header {
@@ -22,11 +25,14 @@ header + h1 {
 	align-items: center;
 }
 
+h1 {
+	padding: 15px;
+}
+
 .row {
 	display: block;
 	border-bottom: 1px solid black;
-	width: 80%;
-	margin: 0 auto;
+	
 }
 
 .users-list dl {
