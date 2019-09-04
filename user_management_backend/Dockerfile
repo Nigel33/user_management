@@ -6,4 +6,3 @@ COPY Gemfile /user_management_backend/Gemfile
 COPY Gemfile.lock /user_management_backend/Gemfile.lock
 RUN bundle install
 COPY . /user_management_backend
-ENV DB_HOST db
