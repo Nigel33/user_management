@@ -1,6 +1,8 @@
 'use strict';
 
 // Define the `phonecatApp` module
-angular.module('user-management', [
-  
+var app = angular.module('user-management', [
+  'ngRoute',
+  'users'
 ]);
+
