@@ -5,6 +5,45 @@
 
 body {
   padding-top: 20px;
+  margin 0 20px;
+  font: 20px arial, helvetica;
+  width: 80%;
+	margin: 0 auto;
 }
+
+header {
+	display: flex;
+	background-color: purple;
+	justify-content: center;
+	height: 100px;
+	width: 100%;
+	color: white;
+	align-items: center;
+}
+
+header + h1 {
+	align-items: center;
+}
+
+h1 {
+	padding: 15px;
+}
+
+.row {
+	display: block;
+	border-bottom: 1px solid black;
+	
+}
+
+.users-list dl {
+	display: flex;
+	padding: 15px;
+}
+
+.users-list dt {
+	padding-right: 5px
+}
+
+
 
 
