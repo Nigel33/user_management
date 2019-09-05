@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Users</h1>
-  <div class="users-list row" ng-repeat="user in $ctrl.users">
+  <div class="users-list row" ng-repeat="user in users">
     <dl>
     	<dt>First Name: </dt>
     	<dd>{{user.first_name}}</dd>
@@ -8,22 +8,6 @@
     <dl>
     	<dt>Last Name: </dt>
     	<dd>{{user.last_name}}</dd>
-    </dl>
-    <dl>
-    	<dt>Gender: </dt>
-    	<dd>{{user.gender}}</dd>
-    </dl>
-    <dl>
-    	<dt>Age: </dt>
-    	<dd>{{user.age}}</dd>
-    </dl>
-    <dl>
-    	<dt>Address: </dt>
-    	<dd>{{user.address}}</dd>
-    </dl>
-    <dl>
-    	<dt>Age: </dt>
-    	<dd>{{user.age}}</dd>
     </dl>
   </div>
 </div>

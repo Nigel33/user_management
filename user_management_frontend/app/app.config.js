@@ -5,7 +5,8 @@
     function config($locationProvider, $routeProvider) {
       $routeProvider.
         when('/users', {
-          template: '<users></users>'
+          templateUrl: 'components/users/users-template.html',
+          controller: 'UsersController'
         })
     }
   ]);
