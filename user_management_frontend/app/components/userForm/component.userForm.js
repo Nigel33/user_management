@@ -1,5 +1,5 @@
 
-  var modal = angular.module('userForm', []);
+  angular.module('userForm', []);
 
   angular.module('userForm').
     component('userForm', {
