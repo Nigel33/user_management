@@ -1,0 +1,25 @@
+<form>
+	<fieldset>
+		<dl> 
+			<dt><label for="first-name">First Name</label></dt>
+			<dd><input id="first-name" ng-model="user.first_name" type="text" /></dd>
+		</dl>
+		<dl> 
+			<dt><label for="last-name">Last Name</label></dt>
+			<dd><input id="last-name" ng-model="user.last_name" type="text" /></dd>
+		</dl>
+		<dl> 
+			<dt><label for="age">Age</label></dt>
+			<dd><input id="age" ng-model="user.age" type="number" /></dd>
+		</dl>
+		<dl> 
+			<dt><label for="address">Address</label></dt>
+			<dd><textarea id="address" ng-model="user.address"></textarea></dd>
+		</dl>
+		<dl> 
+			<dt><label for="gender">Gender</label></dt>
+			<dd><input id="gender" ng-model="user.gender" type="text"></dd>
+		</dl>
+	</fieldset>
+	<button ng-click="submitUser()">Submit</button>
+</form>
