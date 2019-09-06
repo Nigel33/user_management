@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Users</h1>
   <div class="users-list row" ng-repeat="user in users">
+    <a href="/#!/users/{{user.id}}" >
     <dl>
     	<dt>First Name: </dt>
     	<dd>{{user.first_name}}</dd>
@@ -9,6 +10,7 @@
     	<dt>Last Name: </dt>
     	<dd>{{user.last_name}}</dd>
     </dl>
+    </a>
   </div>
   <button ng-click="addUser($event)">Add user</button>
   <user-form class="invisible"></user-form>
