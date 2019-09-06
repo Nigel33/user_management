@@ -5,15 +5,20 @@
     component('userForm', {
       templateUrl: 'components/userForm/userForm-template.html',
       controller: ['$http', "$scope", '$rootScope', function userFormController($http, $scope, $rootScope) {
-        $scope.submitUser = function() {
+        $scope.submitUser = function(isValid) {
           var url = 'http://localhost:3000/api/users'
           var data = $scope.user;
           var config = 'contenttype';
 
-          $http.post(url, data, config).then(function(response) {
-            $rootScope.users.push(response.data);  
-          });
+          if (isValid) {
+            $http.post(url, data, config).then(function(response) {
+              $rootScope.users.push(response.data);  
+            });
+          }
+          
         }
+
+        $scope.validGender = /\bfemale\b|\bmale\b|\bsecret\b/;
       }]
     });
 
