@@ -1,4 +1,4 @@
-var users = angular.module('users', ['userForm']);
+var users = angular.module('users', []);
 
 users.controller("UsersController", ['$http', '$scope', '$rootScope', function($http, $scope, $rootScope) {
 	function getUsers() {
