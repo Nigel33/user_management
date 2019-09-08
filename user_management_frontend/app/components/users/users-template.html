@@ -11,6 +11,7 @@
     	<dd>{{user.last_name}}</dd>
     </dl>
     </a>
+    <button ng-click="deleteUser(user.id)">Delete</button>
   </div>
   <button ng-click="addUser($event)">Add user</button>
   <user-form class="invisible" ctrl="createUser" users="users" user="user"></user-form>

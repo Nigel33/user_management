@@ -2,6 +2,7 @@
 var app = angular.module('user-management', [
   'ngRoute',
   'users',
-  'userDetail'
+  'userDetail',
+  'userServices'
 ]);
 
