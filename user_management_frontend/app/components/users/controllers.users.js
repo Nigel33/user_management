@@ -1,17 +1,21 @@
 var users = angular.module('users', []);
 
-users.controller("UsersController", ['$http', '$scope', '$rootScope', function($http, $scope, $rootScope) {
-	function getUsers() {
-		$http.get('http://localhost:3000/api/users').then(function(response) {
-	    $rootScope.users = response.data;
-	  });
-	}
-
-	getUsers();
+users.controller("UsersController", ['$http', '$scope', '$rootScope', 'userServices', function($http, $scope, $rootScope, userServices) {
+	userServices.getUsers().then(function(res) {
+		$scope.users = res;
+	});
 
 	$scope.addUser = function(e) {
     var $button = angular.element(e.target);
     
     $button.next('.modal').toggleClass('invisible')
+  };
+
+  $scope.deleteUser = function(id) {
+  	userServices.deleteUser(id).then(function(_) {
+  		$scope.users = $scope.users.filter(function(user) {
+  			return user.id !== id;
+  		})
+  	});
   };
 }]);

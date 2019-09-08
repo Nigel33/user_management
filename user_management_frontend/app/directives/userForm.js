@@ -1,27 +1,19 @@
-function createUser($scope, $rootScope, $http) {
+function createUser(userServices, $scope, $http) {
 	$scope.submitUser = function(isValid) {
-    var url = 'http://localhost:3000/api/users'
-    var data = $scope.user;
-    var config = 'contenttype';
-
     if (isValid) {
-      $http.post(url, data, config).then(function(response) {
-        $scope.users.push(response.data);  
+      userServices.createUser($scope.user).then(function(newUser) {
+        $scope.users.push(newUser);  
       });
     }
   }
 }
 
-function editUser($scope, $http, $routeParams) {
+function editUser(userServices, $scope, $http, $routeParams) {
 	$scope.submitUser = function(isValid) {
-		var url = 'http://localhost:3000/api/users/' + String($routeParams.id);
-		var data = $scope.user;
-		var config = 'contenttype';
-
 		if (isValid) {
-      $http.put(url, data, config).then(function(response) {
-        return response.data;  
-      });
+      userServices.updateUser($scope.user).then(function(res) {
+      	return res;
+      })
     }
 	}
 }
